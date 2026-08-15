@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#4F46E5">
+  <meta name="description" content="Blue Purple — stationery, gifts and toys in Jamath Road, Vaniyambadi. Order pickup, book a visit and chat on WhatsApp.">
+  <title>Blue Purple — Stationery • Gifts • Toys</title>
+  <style>
+    :root{
+      --primary:#4F46E5;--accent:#7C3AED;--gold:#F59E0B;--ink:#1F2937;
+      --cream:#FFFDF7;--white:#fff;--muted:#6B7280;--line:#E8E5DD;
+      --shadow:0 14px 40px rgba(31,41,55,.08);--r:24px;
+    }
+    *{box-sizing:border-box}html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:-.015em}
+    button,input,textarea,select{font:inherit}button{cursor:pointer}
+    a{color:inherit;text-decoration:none}.container{width:min(1120px,92%);margin:auto}
+    .topbar{position:sticky;top:0;z-index:50;background:rgba(255,253,247,.82);backdrop-filter:blur(16px);border-bottom:1px solid rgba(232,229,221,.8)}
+    .nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800}.logo{width:40px;height:40px;border-radius:14px;background:linear-gradient(135deg,var(--primary),var(--accent));display:grid;place-items:center;color:#fff;box-shadow:0 8px 22px rgba(79,70,229,.25)}
+    .navlinks{display:none;gap:22px;font-size:14px}.navlinks a{color:#4B5563}.navlinks a:hover{color:var(--primary)}
+    .cartbtn{border:0;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 12px;box-shadow:0 4px 14px rgba(31,41,55,.05)}
+    .hero{padding:52px 0 28px}.hero-grid{display:grid;gap:28px;align-items:center}.eyebrow{display:inline-flex;padding:7px 11px;border-radius:999px;background:#EEEAFE;color:var(--primary);font-size:12px;font-weight:800}
+    h1{font-size:clamp(40px,11vw,76px);line-height:.98;margin:15px 0;letter-spacing:-.055em;max-width:780px}.lead{font-size:17px;line-height:1.65;color:#5B6472;max-width:650px}
+    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.btn{border:0;border-radius:16px;padding:13px 17px;font-weight:800;transition:.18s transform,.18s box-shadow}.btn:active{transform:translateY(2px)}
+    .primary{background:var(--primary);color:#fff;box-shadow:0 10px 24px rgba(79,70,229,.22)}.secondary{background:#fff;border:1px solid var(--line);color:var(--ink)}
+    .hero-card{min-height:330px;border-radius:32px;overflow:hidden;position:relative;box-shadow:var(--shadow);background:#ddd}
+    .hero-card img{width:100%;height:100%;object-fit:cover;display:block}.hero-card:after{content:"";position:absolute;inset:auto 0 0;height:48%;background:linear-gradient(transparent,rgba(0,0,0,.5))}
+    .hero-caption{position:absolute;z-index:2;left:18px;right:18px;bottom:18px;color:#fff;font-weight:800}
+    section{padding:42px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:18px}.section-head h2{margin:0;font-size:30px;letter-spacing:-.04em}.section-head p{margin:6px 0 0;color:var(--muted)}
+    .chips{display:flex;gap:8px;overflow:auto;padding:2px 0 12px}.chip{white-space:nowrap;border:1px solid var(--line);background:#fff;padding:9px 13px;border-radius:999px}.chip.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+    .products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 6px 20px rgba(31,41,55,.04);transition:.18s transform,.18s box-shadow}.card:active{transform:translateY(-2px);box-shadow:var(--shadow)}
+    .product-img{aspect-ratio:1/1;overflow:hidden;background:#eee}.product-img img{width:100%;height:100%;object-fit:cover;display:block}.cardbody{padding:13px}.tag{font-size:11px;color:var(--accent);font-weight:800}.card h3{font-size:16px;margin:5px 0}.desc{font-size:12px;color:var(--muted);min-height:34px}.price{font-weight:900;margin:9px 0}.quick{width:100%;padding:10px;border:0;border-radius:13px;background:#F0EFFE;color:var(--primary);font-weight:800}
+    .feature-grid{display:grid;gap:12px}.feature{background:#fff;border:1px solid var(--line);padding:20px;border-radius:22px}.feature b{display:block;margin:7px 0}.feature p{margin:0;color:var(--muted);line-height:1.5;font-size:14px}
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.gallery button{border:0;padding:0;border-radius:18px;overflow:hidden;aspect-ratio:1;background:#ddd}.gallery img{width:100%;height:100%;object-fit:cover}
+    .review{background:#fff;border:1px solid var(--line);border-radius:20px;padding:17px;margin-bottom:10px}.stars{color:var(--gold);letter-spacing:2px}.review p{color:#5B6472;line-height:1.5}
+    .contact{background:#191D2A;color:#fff;border-radius:28px;padding:25px}.contact p{color:#CBD0DB;line-height:1.6}.contact .btn.secondary{background:transparent;color:#fff;border-color:#4A5162}
+    footer{padding:35px 0 100px;color:#687180;font-size:13px}
+    .bottom{position:fixed;z-index:60;left:10px;right:10px;bottom:10px;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border:1px solid var(--line);box-shadow:0 10px 35px rgba(0,0,0,.12);border-radius:22px;display:grid;grid-template-columns:repeat(4,1fr);padding:7px}.bottom a,.bottom button{border:0;background:none;padding:8px 2px;text-align:center;font-size:11px;color:#667085}.bottom span{display:block;font-size:18px;margin-bottom:2px}.bottom .active{color:var(--primary);font-weight:800}
+    .wa{position:fixed;right:15px;bottom:88px;z-index:55;width:54px;height:54px;border-radius:50%;border:0;background:#25D366;color:#fff;font-size:23px;box-shadow:0 12px 30px rgba(37,211,102,.28)}
+    .modal{position:fixed;inset:0;background:rgba(15,23,42,.48);z-index:100;display:none;align-items:end}.modal.show{display:flex}.sheet{background:var(--cream);width:100%;max-height:92vh;overflow:auto;border-radius:28px 28px 0 0;padding:20px}.sheethead{display:flex;justify-content:space-between;align-items:center}.close{border:0;background:#fff;border:1px solid var(--line);border-radius:12px;width:40px;height:40px}
+    form{display:grid;gap:12px}.field{display:grid;gap:6px}.field label{font-size:13px;font-weight:800}.field input,.field textarea,.field select{width:100%;border:1px solid var(--line);background:#fff;border-radius:14px;padding:13px;outline:none}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--primary);box-shadow:0 0 0 3px #4F46E51A}
+    .slots{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.slot{border:1px solid var(--line);background:#fff;border-radius:12px;padding:10px}.slot.selected{background:var(--primary);color:#fff;border-color:var(--primary)}
+    .cartline{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}.qty{display:flex;gap:7px;align-items:center}.qty button{border:1px solid var(--line);background:#fff;border-radius:9px;width:30px;height:30px}
+    .toast{position:fixed;z-index:150;left:50%;bottom:86px;transform:translate(-50%,20px);background:#111827;color:#fff;padding:12px 16px;border-radius:14px;opacity:0;pointer-events:none;transition:.2s}.toast.show{opacity:1;transform:translate(-50%,0)}
+    .lightbox{position:fixed;inset:0;z-index:140;background:rgba(0,0,0,.9);display:none;place-items:center;padding:18px}.lightbox.show{display:grid}.lightbox img{max-width:100%;max-height:85vh;border-radius:18px}
+    @media(min-width:700px){.navlinks{display:flex}.bottom{display:none}.wa{bottom:22px}.hero{padding-top:80px}.hero-grid{grid-template-columns:1.1fr .9fr}.products{grid-template-columns:repeat(4,1fr)}.feature-grid{grid-template-columns:repeat(3,1fr)}.gallery{grid-template-columns:repeat(4,1fr)}.modal{align-items:center;justify-content:center}.sheet{width:min(620px,94%);border-radius:28px;max-height:88vh}}
+  </style>
+</head>
+<body>
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="#home"><span class="logo">BP</span><span>Blue Purple</span></a>
+    <nav class="navlinks"><a href="#home">Home</a><a href="#products">Products</a><a href="#book">Book</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></nav>
+    <button class="cartbtn" onclick="openCart()">🛍️ <span id="cartCount">0</span></button>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Stationery • Gifts • Toys</span>
+        <h1>Little things. Big smiles.</h1>
+        <p class="lead">A warm local shop for thoughtful gifts, stationery and fun finds — right on Jamath Road, Vaniyambadi.</p>
+        <div class="actions">
+          <button class="btn primary" onclick="openBooking()">Book / Order Now</button>
+          <a class="btn secondary" href="https://wa.me/918608200659?text=Hi%20Blue%20Purple%2C%20I%27d%20like%20to%20know%20what%27s%20available%20today." target="_blank" rel="noopener">Chat on WhatsApp</a>
+        </div>
+        <p style="font-size:13px;color:#6B7280;margin-top:14px">📍 Jamath Road, Vaniyambadi, Tamil Nadu 635751</p>
+      </div>
+      <div class="hero-card">
+        <img loading="eager" src="https://images.unsplash.com/photo-1455885666463-6b7f6f3f4d9a?auto=format&fit=crop&w=1000&q=82" alt="Colourful stationery and gift supplies">
+        <div class="hero-caption">Curated stationery, gifts & toys — picked with care.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="specials">
+    <div class="container">
+      <div class="section-head"><div><h2>Today’s picks</h2><p>Quick favourites for school, home and gifting.</p></div></div>
+      <div class="feature-grid">
+        <div class="feature"><span>✏️</span><b>Everyday stationery</b><p>Notebooks, pens and essentials for study and work.</p></div>
+        <div class="feature"><span>🎁</span><b>Gift-ready finds</b><p>Small surprises for birthdays, friends and family.</p></div>
+        <div class="feature"><span>🧸</span><b>Fun & toys</b><p>Playful picks for little ones and the young at heart.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products">
+    <div class="container">
+      <div class="section-head"><div><h2>Shop favourites</h2><p>Tap + to add for pickup.</p></div></div>
+      <input id="search" aria-label="Search products" placeholder="🔎 Search stationery, gifts or toys..." style="width:100%;padding:14px;border:1px solid var(--line);border-radius:16px;background:#fff;margin-bottom:12px" oninput="renderProducts()">
+      <div class="chips" id="chips"></div>
+      <div class="products" id="productGrid"></div>
+    </div>
+  </section>
+
+  <section id="book">
+    <div class="container">
+      <div class="section-head"><div><h2>Book or order</h2><p>Send your details directly to Blue Purple on WhatsApp.</p></div></div>
+      <div class="card" style="padding:18px">
+        <form id="bookingForm" onsubmit="submitBooking(event)">
+          <div class="field"><label for="name">Your name</label><input id="name" required autocomplete="name" placeholder="Enter your name"></div>
+          <div class="field"><label for="phone">Phone / WhatsApp</label><input id="phone" required inputmode="tel" autocomplete="tel" placeholder="10-digit number"></div>
+          <div class="field"><label for="type">What do you need?</label><select id="type"><option>Order for pickup</option><option>Visit / shopping booking</option><option>Gift enquiry</option><option>Toy enquiry</option></select></div>
+          <div class="field"><label for="date">Date</label><input id="date" type="date" required></div>
+          <div class="field"><label>Preferred time</label><div class="slots" id="slots"></div></div>
+          <div class="field"><label for="notes">Notes</label><textarea id="notes" rows="3" placeholder="Items, quantity, gift wrapping or anything else..."></textarea></div>
+          <button class="btn primary" type="submit">Send booking to WhatsApp →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="container">
+      <div class="section-head"><div><h2>Inside Blue Purple</h2><p>A few glimpses of the world of stationery, gifts and toys.</p></div></div>
+      <div class="gallery">
+        <button onclick="lightbox(this)"><img loading="lazy" src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=700&q=78" alt="Books and stationery"></button>
+        <button onclick="lightbox(this)"><img loading="lazy" src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=700&q=78" alt="Colourful toys"></button>
+        <button onclick="lightbox(this)"><img loading="lazy" src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=700&q=78" alt="Notebook and writing supplies"></button>
+        <button onclick="lightbox(this)"><img loading="lazy" src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=700&q=78" alt="Children's toys"></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="container">
+      <div class="section-head"><div><h2>Customer love</h2><p>Reviews submitted here are stored on this device until you connect a database.</p></div></div>
+      <div id="reviewsList"></div>
+      <div class="card" style="padding:18px;margin-top:14px">
+        <h3 style="margin-top:0">Leave a review</h3>
+        <form onsubmit="addReview(event)">
+          <div class="field"><label for="rname">Your name</label><input id="rname" required></div>
+          <div class="field"><label for="rating">Rating</label><select id="rating"><option value="5">★★★★★ 5</option><option value="4">★★★★☆ 4</option><option value="3">★★★☆☆ 3</option><option value="2">★★☆☆☆ 2</option><option value="1">★☆☆☆☆ 1</option></select></div>
+          <div class="field"><label for="rtext">Review</label><textarea id="rtext" required rows="3" placeholder="Tell us about your visit or order..."></textarea></div>
+          <button class="btn secondary" type="submit">Submit review</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact">
+        <h2>Come say hello 👋</h2>
+        <p>Blue Purple<br>Jamath Road, Vaniyambadi, Tamil Nadu 635751<br>Phone / WhatsApp: 8608200659</p>
+        <div class="actions">
+          <a class="btn primary" href="tel:+918608200659">Call 8608200659</a>
+          <a class="btn secondary" href="https://wa.me/918608200659" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&query=Jamath%20Road%2C%20Vaniyambadi%2C%20Tamil%20Nadu%20635751" target="_blank" rel="noopener">Open Map</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="container">© <span id="year"></span> Blue Purple · Stationery, Gifts & Toys · Vaniyambadi</div></footer>
+
+<a class="wa" aria-label="Chat on WhatsApp" href="https://wa.me/918608200659?text=Hi%20Blue%20Purple%2C%20I%20need%20help." target="_blank" rel="noopener">✆</a>
+<nav class="bottom" aria-label="Mobile navigation">
+  <a class="active" href="#home"><span>⌂</span>Home</a>
+  <a href="#products"><span>🛍</span>Products</a>
+  <a href="#book"><span>📅</span>Book</a>
+  <a href="#contact"><span>☎</span>Contact</a>
+</nav>
+
+<div class="modal" id="cartModal" role="dialog" aria-modal="true" aria-labelledby="cartTitle" onclick="if(event.target===this)closeModal('cartModal')">
+  <div class="sheet"><div class="sheethead"><h2 id="cartTitle">Your pickup order</h2><button class="close" onclick="closeModal('cartModal')">×</button></div><div id="cartItems"></div><div id="cartTotal" style="font-weight:900;padding:14px 0"></div><button class="btn primary" style="width:100%" onclick="checkout()">Send order to WhatsApp →</button></div>
+</div>
+
+<div class="modal" id="productModal" role="dialog" aria-modal="true"><div class="sheet"><div class="sheethead"><h2 id="detailTitle"></h2><button class="close" onclick="closeModal('productModal')">×</button></div><img id="detailImg" style="width:100%;border-radius:20px;max-height:320px;object-fit:cover" alt=""><p id="detailDesc" style="color:var(--muted);line-height:1.6"></p><div id="detailPrice" style="font-size:20px;font-weight:900"></div><div class="actions"><button class="btn primary" onclick="addDetail()">Add to pickup</button><button class="btn secondary" onclick="closeModal('productModal')">Close</button></div></div></div>
+
+<div class="lightbox" id="lightbox" onclick="this.classList.remove('show')"><img id="lightboxImg" alt=""></div>
+<div class="toast" id="toast"></div>
+
+<script>
+const WA="918608200659";
+const products=[
+ {id:1,name:"Classic Notebook",cat:"Stationery",price:80,desc:"Clean ruled notebook for school, college or work.",img:"https://images.unsplash.com/photo-1531346680769-a1d79b57de5c?auto=format&fit=crop&w=700&q=78"},
+ {id:2,name:"Premium Gel Pens",cat:"Stationery",price:120,desc:"Smooth-writing everyday pen set.",img:"https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=700&q=78"},
+ {id:3,name:"Gift Box",cat:"Gifts",price:299,desc:"A simple, cheerful gift-ready box.",img:"https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&w=700&q=78"},
+ {id:4,name:"Mini Plush Toy",cat:"Toys",price:349,desc:"Soft little companion for gifting.",img:"https://images.unsplash.com/photo-1559454403-b8fb88521f11?auto=format&fit=crop&w=700&q=78"},
+ {id:5,name:"Colour Pencils",cat:"Stationery",price:150,desc:"Bright colours for school and creative time.",img:"https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=700&q=78"},
+ {id:6,name:"Puzzle Set",cat:"Toys",price:249,desc:"Screen-free fun for curious minds.",img:"https://images.unsplash.com/photo-1618842676088-c4d48a6a7c9d?auto=format&fit=crop&w=700&q=78"},
+ {id:7,name:"Birthday Card",cat:"Gifts",price:50,desc:"A sweet card for a special day.",img:"https://images.unsplash.com/photo-1607453998774-d533f65dac99?auto=format&fit=crop&w=700&q=78"},
+ {id:8,name:"Study Essentials",cat:"Stationery",price:199,desc:"A handy bundle for everyday study.",img:"https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=700&q=78"}
+];
+let cat="All",cart=JSON.parse(localStorage.getItem("bpCart")||"[]"),detailId=null,selectedTime="10:00 AM";
+
+function renderChips(){document.getElementById("chips").innerHTML=["All","Stationery","Gifts","Toys"].map(c=>`<button class="chip ${cat===c?"active":""}" onclick="cat='${c}';renderChips();renderProducts()">${c}</button>`).join("")}
+function renderProducts(){
+ const q=document.getElementById("search").value.toLowerCase();
+ const list=products.filter(p=>(cat==="All"||p.cat===cat)&&(p.name+" "+p.desc).toLowerCase().includes(q));
+ document.getElementById("productGrid").innerHTML=list.map(p=>`<article class="card"><button style="border:0;background:none;padding:0;width:100%;text-align:left" onclick="openDetail(${p.id})"><div class="product-img"><img loading="lazy" src="${p.img}" alt="${p.name}"></div><div class="cardbody"><span class="tag">${p.cat}</span><h3>${p.name}</h3><div class="desc">${p.desc}</div><div class="price">₹${p.price}</div></div></button><div style="padding:0 13px 13px"><button class="quick" onclick="event.stopPropagation();addToCart(${p.id})">＋ Quick add</button></div></article>`).join("");
+}
+function renderSlots(){let times=["10:00 AM","11:30 AM","1:00 PM","3:00 PM","5:00 PM","7:00 PM"];document.getElementById("slots").innerHTML=times.map(t=>`<button type="button" class="slot ${selectedTime===t?"selected":""}" onclick="selectedTime='${t}';renderSlots()">${t}</button>`).join("")}
+function saveCart(){localStorage.setItem("bpCart",JSON.stringify(cart));document.getElementById("cartCount").textContent=cart.reduce((a,x)=>a+x.qty,0)}
+function addToCart(id){let x=cart.find(i=>i.id===id);x?x.qty++:cart.push({id,qty:1});saveCart();toast("Added to pickup order ✓")}
+function openDetail(id){let p=products.find(x=>x.id===id);detailId=id;document.getElementById("detailTitle").textContent=p.name;document.getElementById("detailImg").src=p.img;document.getElementById("detailImg").alt=p.name;document.getElementById("detailDesc").textContent=p.desc;document.getElementById("detailPrice").textContent="₹"+p.price;document.getElementById("productModal").classList.add("show")}
+function addDetail(){addToCart(detailId);closeModal("productModal")}
+function openCart(){renderCart();document.getElementById("cartModal").classList.add("show")}
+function renderCart(){let total=0;document.getElementById("cartItems").innerHTML=cart.length?cart.map(i=>{let p=products.find(x=>x.id===i.id),s=p.price*i.qty;total+=s;return `<div class="cartline"><div><b>${p.name}</b><div style="color:#6B7280;font-size:12px">₹${p.price} each</div></div><div class="qty"><button onclick="changeQty(${p.id},-1)">−</button><b>${i.qty}</b><button onclick="changeQty(${p.id},1)">＋</button></div></div>`}).join(""):"<p style='color:#6B7280'>Your pickup order is empty.</p>";document.getElementById("cartTotal").textContent=cart.length?"Total: ₹"+total:""}
+function changeQty(id,d){let x=cart.find(i=>i.id===id);if(!x)return;x.qty+=d;if(x.qty<=0)cart=cart.filter(i=>i.id!==id);saveCart();renderCart()}
+function checkout(){if(!cart.length){toast("Add an item first");return}let lines=cart.map(i=>{let p=products.find(x=>x.id===i.id);return `${p.name} x${i.qty} — ₹${p.price*i.qty}`}).join("\n");let total=cart.reduce((a,i)=>a+products.find(p=>p.id===i.id).price*i.qty,0);let msg=`Hi Blue Purple! I would like to order for pickup.\n\n${lines}\nTotal: ₹${total}\n\nPlease confirm availability and pickup time.`;window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`,"_blank");}
+function openBooking(){document.getElementById("book").scrollIntoView({behavior:"smooth"});setTimeout(()=>document.getElementById("name").focus(),500)}
+function submitBooking(e){e.preventDefault();let msg=`Hi Blue Purple! I would like to book/order.\n\nName: ${name.value}\nPhone: ${phone.value}\nType: ${type.value}\nDate: ${date.value}\nPreferred time: ${selectedTime}\nNotes: ${notes.value||"None"}\n\nPlease confirm my booking and availability.`;let id="BP-"+Date.now().toString().slice(-6);localStorage.setItem("bpLastBooking",JSON.stringify({id,msg,date:date.value,time:selectedTime}));window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg+`\nBooking ID: ${id}`)}`,"_blank");toast("WhatsApp opened — booking ID "+id)}
+function addReview(e){e.preventDefault();let arr=JSON.parse(localStorage.getItem("bpReviews")||"[]");arr.unshift({name:rname.value,rating:+rating.value,text:rtext.value,date:new Date().toLocaleDateString()});localStorage.setItem("bpReviews",JSON.stringify(arr));e.target.reset();renderReviews();toast("Review saved on this device ✓")}
+function renderReviews(){let arr=JSON.parse(localStorage.getItem("bpReviews")||"[]");let defaults=[{name:"A happy customer",rating:5,text:"Lovely variety and friendly service.",date:""}];document.getElementById("reviewsList").innerHTML=[...arr,...defaults].slice(0,5).map(r=>`<div class="review"><div class="stars">${"★".repeat(r.rating)}${"☆".repeat(5-r.rating)}</div><b>${escapeHtml(r.name)}</b><small style="color:#9CA3AF"> ${r.date||""}</small><p>${escapeHtml(r.text)}</p></div>`).join("")}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
+function lightbox(el){document.getElementById("lightboxImg").src=el.querySelector("img").src;document.getElementById("lightbox").classList.add("show")}
+function closeModal(id){document.getElementById(id).classList.remove("show")}
+function toast(t){let x=document.getElementById("toast");x.textContent=t;x.classList.add("show");clearTimeout(window.__toast);window.__toast=setTimeout(()=>x.classList.remove("show"),2400)}
+document.getElementById("year").textContent=new Date().getFullYear();renderChips();renderProducts();renderSlots();renderReviews();saveCart();
+</script>
+</body>
+</html>
